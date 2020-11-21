@@ -5,8 +5,8 @@ exports.handler = async function (event) {
   const params = JSON.parse(event.body);
   const { text, type, year, page, id } = params;
 
-  console.log('OMDB_API_KEY: ', OMDB_API_KEY)
-  console.log('params: ', params)
+  console.log('OMDB_API_KEY: ', OMDB_API_KEY);
+  console.log('params: ', params);
 
   const url = id
     ? `https://www.omdbapi.com/?apikey=${OMDB_API_KEY}&i=${id}&plot=full`

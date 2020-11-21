@@ -74,7 +74,7 @@ function _fetchMovie(payload) {
 
   const url = id
     ? `https://www.omdbapi.com/?apikey=${OMDB_API_KEY}&i=${id}&plot=full`
-    : `https://www.omdbapi.com/?apikey=${OMDB_API_KEY}&s=${text}&type=${type}&y=${year}&page=${page}`;
+    : `https://www.omdbapi.com/?apikey=${OMDB_API_KEY}&s=${text}&type=${type}&y=${year}&page=${page}`
 
   return new Promise(async (resolve, reject) => {
     try {

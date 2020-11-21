@@ -1,15 +1,18 @@
-# sample netlify.toml
+# Netlify Dev
+# https://cli.netlify.com/netlify-dev/#netlifytoml-dev-block
+
+# 제품 모드
 [build]
   command = "yarn run build"
-  functions = "functions" # netlify dev uses this directory to scaffold and serve your functions
-  publish = "build"
+  functions = "functions" # Netlify 서버리스 함수가 작성된 디렉토리를 지정합니다.
+  publish = "build" # 프로젝트 빌드 결과의 디렉토리를 지정합니다.
 
-# note: each of these fields are OPTIONAL, with an exception that when you're specifying "command" and "port", you must specify framework = "#custom"
+# 개발 모드
 [dev]
-  framework = "#custom"
-  command = "npm run dev" # Command to start your dev server
-  targetPort = 8080 # The port for your application server, framework or site generator
-  port = 8888 # The port that the netlify dev will be accessible on
-  publish = "public" # The path to your static content folder
-  jwtRolePath = "app_metadata.authorization.roles" # Object path we should look for role values for JWT based redirects
-  autoLaunch = true # a Boolean value that determines if Netlify Dev launches the local server address in your browser
+  framework = "#custom" # 감지할 프로젝트 유형을 지정합니다. 앱 서버 및 `targetPort` 옵션을 실행하는 명령 옵션은 `#custom`입니다.
+  command = "npm run dev:snowpack" # 연결할 프로젝트의 개발 서버를 실행하는 명령(스크립트)을 지정합니다.
+  targetPort = 8080 # 연결할 프로젝트 개발 서버의 포트를 지정합니다.
+  port = 8888 # 출력할 Netlify 서버의 포트를 지정합니다.
+  publish = "public" # 프로젝트의 정적 콘텐츠 디렉토리를 지정합니다.
+  jwtRolePath = "app_metadata.authorization.roles" # JWT 기반 리디렉션에 대한 역할 값을 찾아야하는 객체 경로를 지정합니다.
+  autoLaunch = false # Netlify 서버가 준비되면 자동으로 브라우저를 오픈할 것인지 지정합니다.

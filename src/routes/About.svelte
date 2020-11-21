@@ -7,6 +7,7 @@
   $: email = query.email || 'thesecon@gmail.com'
   $: blog = query.blog || 'https://heropy.blog'
   $: phone = query.phone || '+82-10-1234-5678'
+  $: image = query.image || 'https://heropy.blog/css/images/logo.png'
 </script>
 
 <div class="user-profile">
@@ -15,16 +16,14 @@
       <img src="/assets/svelte.png" alt="User">
     </div>
     <div class="photo">
-      <img src="https://heropy.blog/css/images/logo.png" alt="User">
+      <img src={image} alt="User">
     </div>
   </div>
   <div class="details">
-    {#key query}
-      <div class="name">{name}</div>
-      <div class="email">{email}</div>
-      <div class="blog">{blog}</div>
-      <div class="phone">{phone}</div>
-    {/key}
+    <div class="name">{name}</div>
+    <div class="email">{email}</div>
+    <div class="blog">{blog}</div>
+    <div class="phone">{phone}</div>
   </div>
 </div>
 
