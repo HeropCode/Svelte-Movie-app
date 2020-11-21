@@ -15,14 +15,14 @@
     10, 20, 30
   ]
 
-  let text = ''
+  let title = ''
   let type = 'movie'
   let year = ''
   let number = 10
 
   function apply() {
     searchMovies({
-      text, type, year, number
+      title, type, year, number
     })
   }
 </script>
@@ -30,7 +30,7 @@
 <div class="search">
   <div class="text-field">
     <input
-      bind:value={text}
+      bind:value={title}
       placeholder="Search for Movies, Series & more"
       type="text"
       on:keydown={e => {

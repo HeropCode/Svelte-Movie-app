@@ -3,14 +3,14 @@ const { OMDB_API_KEY } = process.env;
 
 exports.handler = async function (event) {
   const params = JSON.parse(event.body);
-  const { text, type, year, page, id } = params;
+  const { title, type, year, page, id } = params;
 
   console.log('OMDB_API_KEY: ', OMDB_API_KEY);
   console.log('params: ', params);
 
   const url = id
     ? `https://www.omdbapi.com/?apikey=${OMDB_API_KEY}&i=${id}&plot=full`
-    : `https://www.omdbapi.com/?apikey=${OMDB_API_KEY}&s=${text}&type=${type}&y=${year}&page=${page}`;
+    : `https://www.omdbapi.com/?apikey=${OMDB_API_KEY}&s=${title}&type=${type}&y=${year}&page=${page}`;
 
   try {
     const { data } = await axios.get(url);

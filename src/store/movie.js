@@ -8,6 +8,12 @@ export const message = writable('Search for the movie title!')
 export const loading = writable(false)
 export const theMovie = writable({})
 
+export function initMovies() {
+  movies.set([])
+  total.set(0)
+  message.set('Search for the movie title!')
+  loading.set(false)
+}
 export async function searchMovies(payload) {
   if (get(loading)) return
   loading.set(true)
@@ -69,12 +75,12 @@ export async function searchMovieWithId(id) {
 }
 
 function _fetchMovie(payload) {
-  const { text, type, year, page, id } = payload
+  const { title, type, year, page, id } = payload
   const OMDB_API_KEY = '7035c60c'
 
   const url = id
     ? `https://www.omdbapi.com/?apikey=${OMDB_API_KEY}&i=${id}&plot=full`
-    : `https://www.omdbapi.com/?apikey=${OMDB_API_KEY}&s=${text}&type=${type}&y=${year}&page=${page}`
+    : `https://www.omdbapi.com/?apikey=${OMDB_API_KEY}&s=${title}&type=${type}&y=${year}&page=${page}`
 
   return new Promise(async (resolve, reject) => {
     try {
