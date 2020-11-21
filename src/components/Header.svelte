@@ -39,7 +39,7 @@
   <div
     class="user"
     on:click={() => {
-      push('/about?name=Svelte&email=hello@netlify.com&image=%2Fassets%2Fnetlify.png')
+      push('/about?name=Netlify&email=hello@netlify.com&image=%2Fassets%2Fnetlify.png')
     }}>
     <img src="/assets/svelte.png" alt="User">
   </div>
