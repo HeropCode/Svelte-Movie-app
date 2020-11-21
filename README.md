@@ -5,6 +5,8 @@ Svelte API와 관련한 주요 내용은 [Svelte.js 완벽 가이드(Renew)](htt
 
 [DEMO](https://competent-cori-258206.netlify.app/)
 
+![Svelte Movie app, HEROPY](https://raw.githubusercontent.com/HeropCode/Svelte-Movie-app/master/public/assets/svelte-movie-app.gif)
+
 ## Summary
 
 ### Specs
