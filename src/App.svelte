@@ -5,6 +5,7 @@
   import routes from '~/routes'
   import Header from '~/components/Header.svelte'
   import Footer from '~/components/Footer.svelte'
+  console.log($location)
 </script>
 
 <Header />

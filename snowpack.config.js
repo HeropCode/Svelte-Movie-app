@@ -24,7 +24,8 @@ module.exports = {
             // Check package.json browserslist
             require('autoprefixer')()
           ]
-        }
+        },
+        babel: babelOptions()
       })
     }],
     ['@snowpack/plugin-babel', {
