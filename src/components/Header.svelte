@@ -15,7 +15,8 @@
     },
     {
       href: '/about',
-      name: 'About'
+      name: 'About',
+      path: /^\/about/ // 정규표현식 사용!
     }
   ]
 </script>
