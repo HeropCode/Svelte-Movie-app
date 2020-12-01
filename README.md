@@ -35,7 +35,7 @@ Svelte API와 관련한 주요 내용은 [Svelte.js 완벽 가이드(Renew)](htt
 - [snowpack](https://github.com/snowpackjs/snowpack): 프로젝트를 빌드하기 위한 핵심 패키지입니다.  
 - [@snowpack/plugin-svelte](https://github.com/snowpackjs/snowpack/tree/master/plugins/plugin-svelte#readme): Snowpack에서 Svelte를 해석할 수 있습니다. `svelte-preprocess`가 같이 설치됩니다.
 - [@snowpack/plugin-dotenv](https://github.com/snowpackjs/snowpack/tree/master/plugins/plugin-dotenv#readme): 환경 변수를 사용합니다.(.env 파일)
-- [@snowpack/plugin-sass](https://github.com/snowpackjs/snowpack/tree/master/plugins/plugin-sass#readme): SCSS를 사용합니다. `node-sass`가 같이 설치됩니다.
+- [@snowpack/plugin-sass](https://github.com/snowpackjs/snowpack/tree/master/plugins/plugin-sass#readme): SCSS를 사용합니다. `sass`가 같이 설치됩니다.
 - [@snowpack/plugin-optimize](https://github.com/snowpackjs/snowpack/tree/master/plugins/plugin-optimize#readme): 결과를 압축하고 번들링하는 등 최종 결과를 최적화합니다. 
 - [@snowpack/plugin-babel](https://github.com/snowpackjs/snowpack/tree/master/plugins/plugin-babel#readme): 프로젝트의 JavaScript 파일을 변환합니다. 콘솔 제거 패키지를 사용하기 위해 구성합니다.
 - [babel-plugin-transform-remove-console](https://github.com/babel/minify/tree/master/packages/babel-plugin-transform-remove-console): 배포할 제품에서는 불필요한 콘솔 명령을 제거하는 것이 좋습니다.
