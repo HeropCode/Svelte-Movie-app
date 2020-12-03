@@ -26,6 +26,7 @@ module.exports = {
     '~': './src'
   },
   devOptions: {
-    open: 'none'
+    open: 'none',
+    port: 8079
   }
 }

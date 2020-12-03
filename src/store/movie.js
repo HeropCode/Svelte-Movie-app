@@ -3,14 +3,12 @@ import _unionBy from 'lodash/unionBy'
 import { writable, get } from 'svelte/store'
 
 export const movies = writable([])
-export const total = writable(0)
 export const message = writable('Search for the movie title!')
 export const loading = writable(false)
 export const theMovie = writable({})
 
 export function initMovies() {
   movies.set([])
-  total.set(0)
   message.set('Search for the movie title!')
   loading.set(false)
 }
@@ -18,6 +16,7 @@ export async function searchMovies(payload) {
   if (get(loading)) return
   loading.set(true)
   message.set('')
+  let total = 0
 
   try {
     // const res = await _fetchMovie({
@@ -28,14 +27,15 @@ export async function searchMovies(payload) {
       ...payload,
       page: 1
     })
+    // `Search`는 검색된 영화 정보입니다.
+    // `totalResults`는 검색 가능한 영화의 총 개수입니다.
     const { Search, totalResults } = res.data
     movies.set(Search)
-    total.set(totalResults)
+    total = parseInt(totalResults, 10) // 문자에서 숫자로 변환.
   } catch (msg) {
     // 에러가 발생하면,
     // 데이터 초기화.
     movies.set([])
-    total.set(0)
     message.set(msg)
     loading.set(false)
     // 더 이상 요청하지 않도록 함수 종료.
@@ -43,7 +43,8 @@ export async function searchMovies(payload) {
   }
 
   // 추가 요청..
-  const pageLength = Math.ceil(get(total) / 10)
+  // ceil = 올림!
+  const pageLength = Math.ceil(total / 10)
 
   if (pageLength > 1) {
     for (let i = 2; i < pageLength; i += 1) {

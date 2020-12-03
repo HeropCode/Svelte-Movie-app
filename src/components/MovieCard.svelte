@@ -6,6 +6,7 @@
 
   export let movie
 
+  // 영화 포스터가 없는 경우 값으로 'N/A'가 반환됨.
   if (movie.Poster === 'N/A') {
     imageLoading = false
   } else {
