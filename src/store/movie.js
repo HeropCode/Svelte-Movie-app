@@ -30,6 +30,7 @@ export async function searchMovies(payload) {
     // `Search`는 검색된 영화 정보입니다.
     // `totalResults`는 검색 가능한 영화의 총 개수입니다.
     const { Search, totalResults } = res.data
+    console.log(totalResults)
     movies.set(Search)
     total = parseInt(totalResults, 10) // 문자에서 숫자로 변환.
   } catch (msg) {
@@ -47,11 +48,11 @@ export async function searchMovies(payload) {
   const pageLength = Math.ceil(total / 10)
 
   if (pageLength > 1) {
-    for (let i = 2; i < pageLength; i += 1) {
-      if (i > (payload.number / 10)) break
+    for (let page = 2; page <= pageLength; page += 1) {
+      if (page > (payload.number / 10)) break
       const res = await axios.post('/.netlify/functions/movie', {
         ...payload,
-        page: i
+        page
       })
       const { Search } = res.data
       movies.update($movies => _unionBy($movies, Search, 'imdbID'))
