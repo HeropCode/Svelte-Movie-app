@@ -75,7 +75,7 @@
       justify-content: center;
       align-items: center;
       font-family: 'Oswald', sans-serif;
-      color: $color--white--5;
+      color: $color--white-5;
       font-size: 20px;
       text-align: center;
       text-decoration: none;
@@ -97,7 +97,7 @@
         filter: blur(5px);
         &::after {
           content: "";
-          background-color: $color--black--50;
+          background-color: $color--black-50;
           position: absolute;
           top: 0;
           left: 0;

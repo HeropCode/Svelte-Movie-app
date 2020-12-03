@@ -112,7 +112,7 @@
 
 <style lang="scss">
   .movie-details {
-    color: $color--white--50;
+    color: $color--white-50;
     display: flex;
     @media #{$mobile} {
       display: block;

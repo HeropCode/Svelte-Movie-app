@@ -49,7 +49,7 @@
 <style lang="scss">
   header {
     padding: 20px 40px;
-    background-color: $color--black--90;
+    background-color: $color--black-90;
     position: sticky;
     top: 0;
     z-index: 9;

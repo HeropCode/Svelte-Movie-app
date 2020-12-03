@@ -29,7 +29,7 @@
     }
     .description {
       margin: 30px 0;
-      color: $color--white--30;
+      color: $color--white-30;
     }
   }
 </style>

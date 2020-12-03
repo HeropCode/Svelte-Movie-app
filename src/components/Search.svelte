@@ -87,7 +87,6 @@
     .text-field {
       display: inline-block;
       height: 50px;
-      position: relative;
       @media #{$tablet} {
         grid-column: 1 / -1;
       }
@@ -100,11 +99,10 @@
         padding: 0 20px;
         box-sizing: border-box;
         font-size: 14px;
-        color: $color--white--60;
+        color: $color--white-60;
         border-radius: 4px;
-        appearance: none;
         &::placeholder {
-          color: $color--white--30;
+          color: $color--white-30;
         }
       }
     }
@@ -120,7 +118,7 @@
         padding: 0 32px 0 20px;
         box-sizing: border-box;
         font-size: 14px;
-        color: $color--white--60;
+        color: $color--white-60;
         border-radius: 4px;
         background: $color--area;
         cursor: pointer;

@@ -13,7 +13,7 @@
     display: block;
     font-family: 'Oswald', sans-serif;
     font-size: 20px;
-    color: $color--white--50;
+    color: $color--white-50;
     text-decoration: none;
     span {
       color: $color--primary;
