@@ -114,11 +114,10 @@
       .title {
         font-size: 15px;
         font-family: 'Oswald', sans-serif;
-        word-break: break-all;
         position: relative;
         color: $color--white;
-        text-overflow: ellipsis;
         overflow: hidden;
+        text-overflow: ellipsis;
         white-space: nowrap;
       }
     }

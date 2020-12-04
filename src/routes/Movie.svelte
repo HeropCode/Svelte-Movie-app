@@ -19,8 +19,8 @@
   }
 </script>
 
-{#if $loading}
-  <div class="container">
+<div class="container">
+  {#if $loading}
     <div class="skeleton-loader">
       <div class="poster"></div>
       <div class="skeletons">
@@ -33,9 +33,7 @@
       </div>
       <Loader absolute />
     </div>
-  </div>
-{:else if $theMovie.Poster}
-  <div class="container">
+  {:else}
     <div class="movie-details">
       <div
         style="background-image: url({requestDifferentSizeImage($theMovie.Poster)});"
@@ -63,7 +61,6 @@
             {$theMovie.Country}
           </span>
         </div>
-
         <div class="plot">
           {$theMovie.Plot}
         </div>
@@ -78,46 +75,34 @@
                 <img
                   src="/assets/{rating.Source}.png"
                   alt={rating.Source}
-                  title={rating.Source}
                   height="30" />
                 <span>{rating.Value}</span>
               </div>
             {/each}
           </div>
         </div>
-
         <div>
           <h3>Actors</h3>
           {$theMovie.Actors}
         </div>
-
         <div>
           <h3>Director</h3>
           {$theMovie.Director}
         </div>
-
         <div>
           <h3>Production</h3>
           {$theMovie.Production}
         </div>
-
         <div>
           <h3>Genre</h3>
           {$theMovie.Genre}
         </div>
       </div>
-      </div>
-  </div>
-{/if}
+    </div>
+  {/if}
+</div>
 
 <style lang="scss">
-  .movie-details {
-    color: $color--white-50;
-    display: flex;
-    @media #{$mobile} {
-      display: block;
-    }
-  }
   .skeleton-loader {
     display: flex;
     .poster {
@@ -136,21 +121,29 @@
         &:first-child {
           margin-top: 0;
         }
+        &.title {
+          height: 100px;
+        }
+        &.specs {
+          width: 60%;
+          height: 30px;
+        }
+        &.plot {
+          height: 300px;
+        }
+        &.etc {
+          width: 40%;
+          height: 50px;
+        }
       }
-      .title {
-        height: 100px;
-      }
-      .specs {
-        width: 60%;
-        height: 30px;
-      }
-      .plot {
-        height: 300px;
-      }
-      .etc {
-        width: 40%;
-        height: 50px;
-      }
+
+    }
+  }
+  .movie-details {
+    color: $color--white-50;
+    display: flex;
+    @media #{$mobile} {
+      display: block;
     }
   }
   .poster {
@@ -162,7 +155,7 @@
     background-position: center;
     background-size: cover;
     position: relative;
-    background-color: #1C212E;
+    background-color: $color--area;
     @media #{$tablet} {
       width: 300px;
       height: 300px * 3/2;
@@ -177,7 +170,7 @@
     .title {
       font-family: 'Oswald', sans-serif;
       font-size: 70px;
-      color: #fff;
+      color: $color--white;
       line-height: 1;
       margin-bottom: 30px;
       @media #{$mobile} {
@@ -185,7 +178,10 @@
       }
     }
     .labels {
-      color: #FDC000;
+      color: $color--primary;
+      .dot {
+        margin: 0 6px;
+      }
     }
     .plot {
       margin-top: 20px;
@@ -210,13 +206,10 @@
       }
     }
     h3 {
-      color: #fff;
+      color: $color--white;
       margin: 24px 0 6px;
       font-family: 'Oswald', sans-serif;
       font-size: 20px;
-    }
-    .dot {
-      margin: 0 6px;
     }
   }
 </style>
