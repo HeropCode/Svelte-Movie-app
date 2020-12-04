@@ -15,7 +15,7 @@
     img.addEventListener('load', () => {
       imageLoading = false
     })
-    return url.replace('SX300', `SX${size}`)
+    return src
   }
 </script>
 
