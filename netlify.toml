@@ -3,7 +3,7 @@
 
 # 제품 모드
 [build]
-  command = "yarn run build"
+  command = "npm run build"
   functions = "functions" # Netlify 서버리스 함수가 작성된 디렉토리를 지정합니다.
   publish = "build" # 프로젝트 빌드 결과의 디렉토리를 지정합니다.
 
