@@ -40,6 +40,8 @@
   <div
     class="user"
     on:click={() => {
+      // URL Decoder/Encoder
+      // https://meyerweb.com/eric/tools/dencoder/
       push('/about?name=Netlify&email=hello@netlify.com&image=%2Fassets%2Fnetlify.png')
     }}>
     <img src="/assets/svelte.png" alt="User">

@@ -30,37 +30,34 @@
 <style lang="scss">
   .user-profile {
     padding: 80px 0;
-  }
-  .photos {
-    display: flex;
-    justify-content: center;
-    .photo {
-      flex-shrink: 0;
-      width: 230px;
-      height: 230px;
-      padding: 30px;
-      box-sizing: border-box;
-      background-color: $color--area;
-      border-radius: 50%;
+    .photos {
       display: flex;
-      border: 12px solid $color--black;
       justify-content: center;
-      align-items: center;
-      &:first-child {
-        margin-right: -80px;
-      }
-      img {
-        width: 100%;
+      .photo {
+        flex-shrink: 0;
+        width: 230px;
+        height: 230px;
+        padding: 30px;
+        box-sizing: border-box;
+        background-color: $color--area;
+        border-radius: 50%;
+        border: 12px solid $color--black;
+        &:first-child {
+          margin-right: -80px;
+        }
+        img {
+          width: 100%;
+        }
       }
     }
-  }
-  .details {
-    margin-top: 20px;
-    text-align: center;
-    .name {
-      font-size: 40px;
-      font-family: 'Oswald', sans-serif;
-      margin-bottom: 20px;
+    .details {
+      margin-top: 20px;
+      text-align: center;
+      .name {
+        font-size: 40px;
+        font-family: 'Oswald', sans-serif;
+        margin-bottom: 20px;
+      }
     }
   }
 </style>
