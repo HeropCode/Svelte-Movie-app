@@ -25,7 +25,7 @@
       }
       span {
         color: $color--primary;
-      };
+      }
     }
     .description {
       margin: 30px 0;

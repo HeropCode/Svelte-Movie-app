@@ -44,7 +44,7 @@
       // https://meyerweb.com/eric/tools/dencoder/
       push('/about?name=Netlify&email=hello@netlify.com&image=%2Fassets%2Fnetlify.png')
     }}>
-    <img src="/assets/svelte.png" alt="User">
+    <img src="/assets/netlify.png" alt="User">
   </div>
 </header>
 
