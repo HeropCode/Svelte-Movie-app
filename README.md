@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/02d2eae2-9c1a-4ec8-800d-037237999af3/deploy-status)](https://app.netlify.com/sites/competent-cori-258206/deploys)
+
 # Svelte Movie app
 
 Svelte.js와 OMDb API를 사용하는 영화 검색 애플리케이션입니다.<br>
